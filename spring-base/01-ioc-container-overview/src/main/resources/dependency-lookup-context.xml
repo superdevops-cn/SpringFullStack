@@ -9,14 +9,18 @@
         <property name="name" value="王小菜"></property>
     </bean>
     <bean id="rootUser" class="cn.superdevops.dependency.lookup.domain.User">
-        <property name="id" value="0"></property>
+        <property name="id" value="2"></property>
         <property name="name" value="管理员"></property>
     </bean>
-    <bean id="superUser" class="cn.superdevops.dependency.lookup.domain.SuperUser" parent="user">
-        <property name="address" value="Hangzhou"></property>
+    <bean id="superUser" class="cn.superdevops.dependency.lookup.domain.SuperUser">
+        <property name="id" value="3"></property>
+        <property name="name" value="超级管理员"></property>
+        <property name="address" value="杭州"></property>
     </bean>
 
-    <bean id="superMan" class="cn.superdevops.dependency.lookup.domain.SuperMan" parent="rootUser">
+    <bean id="superMan" class="cn.superdevops.dependency.lookup.domain.SuperMan">
+        <property name="id" value="4"></property>
+        <property name="name" value="蜘蛛侠"></property>
         <property name="superpower" value="飞翔"></property>
     </bean>
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
