@@ -80,7 +80,6 @@ public class DependencyLookup {
             Map<String, User> ofType = listableBeanFactory.getBeansOfType(User.class);
             System.out.println("集合Bean对象查找：" + ofType);
         }
-
     }
 
     //单个Bean对象查找
